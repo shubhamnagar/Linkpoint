@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <linkpoint>
+                <active>0</active>
+                <title>Credit Card (First Data)</title>
+                <order_status>pending</order_status>
+                <cctypes>AE,VI,MC</cctypes>
+                <useccv>1</useccv>
+                <allowspecific>0</allowspecific>
+                <api_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <payment_action>authorize_capture</payment_action>
+                <model>Raveinfosys\Linkpoint\Model\Payment\Linkpoint</model>
+            </linkpoint>
+        </payment>
+    </default>
+</config>
